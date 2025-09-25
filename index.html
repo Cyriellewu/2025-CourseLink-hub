@@ -88,7 +88,7 @@
 
     .chip{display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; background:var(--chip); border:1px solid var(--border); color:var(--chip-text); font-size:12px}
 
-    /* ===== Layout: top hero then 2-column grid for four courses ===== */
+    /* ===== Layout: top hero then 2-column grid for courses ===== */
     .grid{display:grid; gap:18px; grid-template-columns:1fr}
     @media (min-width: 820px){ .grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
 
@@ -109,121 +109,130 @@
     <h1>📚 Course Links Hub · Fall 2025</h1>
   </header>
 
-    <section aria-label="Canvas quick access" style="text-align:center; margin:24px 0 32px;">
-      <a class="btn" href="https://courseworks2.columbia.edu" target="_blank" rel="noopener" style="font-size:1.05rem; padding:14px 26px;">
-        🧭 Canvas →
-      </a>
-    </section>
+  <section aria-label="Canvas quick access" style="text-align:center; margin:24px 0 32px;">
+    <a class="btn" href="https://courseworks2.columbia.edu" target="_blank" rel="noopener" style="font-size:1.05rem; padding:14px 26px;">
+      🧭 Canvas →
+    </a>
+  </section>
 
+  <!-- ===== Courses in two columns ===== -->
+  <section class="grid" aria-label="Course cards">
+    <!-- SaaS -->
+    <article class="card" aria-labelledby="saas">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <h2 id="saas">🧰 Engineering SaaS</h2>
+        <span class="chip">Tue & Thu · 8:40–9:55 · 833 Mudd</span>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <a class="btn" href="https://courseworks2.columbia.edu/courses/227021/files" target="_blank" rel="noopener">Slides</a>
+        <a class="btn" href="https://codio.com/home/student?course_id=19944251b4e7ef504ebc348067252666" target="_blank" rel="noopener">Codio</a>
+        <a class="btn secondary" href="https://www.cs.columbia.edu/~junfeng/25fa-w4152/assignments.html#hw-ruby" target="_blank" rel="noopener">Assignments</a>
+        <a class="btn secondary" href="https://edstem.org/us/courses/81295/discussion/6965002" target="_blank" rel="noopener">Ed</a>
+      </div>
+    </article>
 
-    <!-- ===== Four courses in two columns ===== -->
-    <section class="grid" aria-label="Course cards">
-      <!-- SaaS -->
-      <article class="card" aria-labelledby="saas">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <h2 id="saas">🧰 Engineering SaaS</h2>
+    <!-- NEW: COMS W4111 Intro to Databases -->
+    <article class="card" aria-labelledby="w4111">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <h2 id="w4111">🗄️ COMS W4111 · Intro to Databases</h2>
+        <span class="chip">Intro to DB</span>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <!-- Canvas & Hex side-by-side -->
+        <a class="btn secondary" href="https://courseworks2.columbia.edu" target="_blank" rel="noopener">Canvas</a>
+        <a class="btn" href="https://app.hex.tech/kar-4111/home" target="_blank" rel="noopener">Hex</a>
+        <!-- Zoom button -->
+        <a class="btn" href="https://columbiauniversity.zoom.us/j/93549288384?pwd=ge5xqaPE4b8Q595uRTZDfLrUi0deeb.1" target="_blank" rel="noopener">Zoom</a>
+      </div>
+    </article>
 
-          <span class="chip">Tue & Thu · 8:40–9:55 · 833 Mudd</span>
-        </div>
-        <div class="btns" style="margin-top:6px">
-          <a class="btn" href="https://courseworks2.columbia.edu/courses/227021/files" target="_blank" rel="noopener">Slides</a>
-          <a class="btn" href="https://codio.com/home/student?course_id=19944251b4e7ef504ebc348067252666" target="_blank" rel="noopener">Codio</a>
-          <a class="btn secondary" href="https://www.cs.columbia.edu/~junfeng/25fa-w4152/assignments.html#hw-ruby" target="_blank" rel="noopener">Assignments</a>
-          <a class="btn secondary" href="https://edstem.org/us/courses/81295/discussion/6965002" target="_blank" rel="noopener">Ed</a>
-        </div>
-      </article>
-
-      <!-- DL for CV -->
+    <!-- DL for CV -->
     <!-- 在 “DL for CV” 那个 card 内，把 Slides 外加一个 “Assignments” button 指向你的链接 -->
+    <article class="card" aria-labelledby="dlcv">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <h2 id="dlcv"><a href="https://www.deeplearningforcomputervision.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">🤖 Deep Learning for Computer Vision</a></h2>
+        <span class="chip">Tue · 2:40–3:55 · 402 Chandler</span>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <!-- 新增按钮：Assignments -->
+        <a class="btn secondary" href="https://www.deeplearningforcomputervision.com/syllabus.html" target="_blank" rel="noopener">Slides</a>
+        <a class="btn secondary" href="https://www.deeplearningforcomputervision.com/assignments-and-resources.html" target="_blank" rel="noopener">Assignments</a>
+        <a class="btn" href="https://courseworks2.columbia.edu/courses/227043/assignments" target="_blank" rel="noopener">Upload</a>
+      </div>
+    </article>
 
-      <article class="card" aria-labelledby="dlcv">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <h2 id="dlcv"><a href="https://www.deeplearningforcomputervision.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">🤖 Deep Learning for Computer Vision</a></h2>
-          <span class="chip">Tue · 2:40–3:55 · 402 Chandler</span>
-        </div>
-        <div class="btns" style="margin-top:6px">
-          <!-- 新增按钮：Assignments -->
-           <a class="btn secondary" href="https://www.deeplearningforcomputervision.com/syllabus.html" target="_blank" rel="noopener">Slides</a>
-            <a class="btn secondary" href="https://www.deeplearningforcomputervision.com/assignments-and-resources.html" target="_blank" rel="noopener">Assignments</a>
+    <!-- H4D -->
+    <article class="card" aria-labelledby="h4d">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <h2 id="h4d">🛡️ Hacking 4 Defense</h2>
+        <span class="chip">Tue · 4:10–6:40 · 829 Mudd</span>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <a class="btn" href="https://drive.google.com/drive/folders/1SrQLn3WlfQSV3P0XjtwQ8BqNwMDLdDQd" target="_blank" rel="noopener">Google Drive</a>
+      </div>
+    </article>
 
-          <a class="btn" href="https://courseworks2.columbia.edu/courses/227043/assignments" target="_blank" rel="noopener">Upload</a>
-          
-                 </div>
-      </article>
+    <!-- Mobile Computing -->
+    <article class="card" aria-labelledby="mobile">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <h2 id="mobile">📱 Mobile Computing</h2>
+        <span class="chip">Fri · 12:10–2:00 · 829 Mudd</span>
+      </div>
+      <div class="btns" style="margin-top:6px">
+        <a class="btn" href="https://www.cs.columbia.edu/~xia/mobilex/readings.html" target="_blank" rel="noopener">Readings</a>
+        <a class="btn secondary" href="https://edstem.org/us/courses/86276/discussion" target="_blank" rel="noopener">Ed</a>
+      </div>
+    </article>
+  </section>
 
-      <!-- H4D -->
-      <article class="card" aria-labelledby="h4d">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <h2 id="h4d">🛡️ Hacking 4 Defense</h2>
-          <span class="chip">Tue · 4:10–6:40 · 829 Mudd</span>
-        </div>
-        <div class="btns" style="margin-top:6px">
-          <a class="btn" href="https://drive.google.com/drive/folders/1SrQLn3WlfQSV3P0XjtwQ8BqNwMDLdDQd" target="_blank" rel="noopener">Google Drive</a>
-        </div>
-      </article>
-
-      <!-- Mobile Computing -->
-      <article class="card" aria-labelledby="mobile">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <h2 id="mobile">📱 Mobile Computing</h2>
-          <span class="chip">Fri · 12:10–2:00 · 829 Mudd</span>
-        </div>
-        <div class="btns" style="margin-top:6px">
-          <a class="btn" href="https://www.cs.columbia.edu/~xia/mobilex/readings.html" target="_blank" rel="noopener">Readings</a>
-          <a class="btn secondary" href="https://edstem.org/us/courses/86276/discussion" target="_blank" rel="noopener">Ed</a>
-        </div>
-      </article>
-    </section>
-
-    <!-- Optional: Weekly Schedule (kept) -->
-    <h3>Weekly Schedule</h3>
-    <table aria-label="weekly schedule">
-      <thead>
-        <tr>
-          <th class="time">Time</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="time">8:40–9:55</td>
-          <td></td>
-          <td class="cell">SaaS<br/>833 Mudd</td>
-          <td></td>
-          <td class="cell">SaaS<br/>833 Mudd</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="time">12:10–2:00</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="cell">Mobile<br/>829 Mudd</td>
-        </tr>
-        <tr>
-          <td class="time">2:40–3:55</td>
-          <td></td>
-          <td class="cell">DL for CV<br/>402 Chandler</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="time">4:10–6:40</td>
-          <td></td>
-          <td class="cell">H4D<br/>829 Mudd</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
+  <!-- Optional: Weekly Schedule (kept) -->
+  <h3>Weekly Schedule</h3>
+  <table aria-label="weekly schedule">
+    <thead>
+      <tr>
+        <th class="time">Time</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time">8:40–9:55</td>
+        <td></td>
+        <td class="cell">SaaS<br/>833 Mudd</td>
+        <td></td>
+        <td class="cell">SaaS<br/>833 Mudd</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time">12:10–2:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="cell">Mobile<br/>829 Mudd</td>
+      </tr>
+      <tr>
+        <td class="time">2:40–3:55</td>
+        <td></td>
+        <td class="cell">DL for CV<br/>402 Chandler</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time">4:10–6:40</td>
+        <td></td>
+        <td class="cell">H4D<br/>829 Mudd</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
   <footer>
     © 2025 · Course Links Hub — follows your system theme
